@@ -9,7 +9,7 @@
 import Foundation
 
 extension URLRequest {
-    var cURL: String {
+    public var cURL: String {
         guard let url = self.url else { return "" }
         var baseCommand = "curl \(url.absoluteString)"
         
