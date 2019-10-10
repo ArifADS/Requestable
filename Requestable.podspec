@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Requestable'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.license          = 'MIT'
   s.summary          = 'Requestable'
   s.homepage         = 'https://arifads.eu'

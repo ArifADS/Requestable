@@ -8,8 +8,8 @@
 
 import Foundation
 
-extension URLRequest {
-    public var cURL: String {
+public extension URLRequest {
+    var cURL: String {
         guard let url = self.url else { return "" }
         var baseCommand = "curl \(url.absoluteString)"
         
