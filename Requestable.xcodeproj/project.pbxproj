@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		027659EF236AD5F000029D3B /* MockRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027659EE236AD5F000029D3B /* MockRequestable.swift */; };
 		02E1A2FB217E2F7000A0B320 /* Requestable.h in Headers */ = {isa = PBXBuildFile; fileRef = 02E1A2F9217E2F7000A0B320 /* Requestable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02E1A302217E2FA400A0B320 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1A301217E2FA400A0B320 /* Requestable.swift */; };
 		02E1A304217E307200A0B320 /* Dictionary+QueryItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1A303217E307200A0B320 /* Dictionary+QueryItems.swift */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		027659EE236AD5F000029D3B /* MockRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequestable.swift; sourceTree = "<group>"; };
 		02E1A2F6217E2F7000A0B320 /* Requestable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Requestable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02E1A2F9217E2F7000A0B320 /* Requestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Requestable.h; sourceTree = "<group>"; };
 		02E1A2FA217E2F7000A0B320 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				02E1A2F9217E2F7000A0B320 /* Requestable.h */,
 				02E1A2FA217E2F7000A0B320 /* Info.plist */,
 				02E1A301217E2FA400A0B320 /* Requestable.swift */,
+				027659EE236AD5F000029D3B /* MockRequestable.swift */,
 				02E1A303217E307200A0B320 /* Dictionary+QueryItems.swift */,
 				02E1A305217E30A400A0B320 /* URLRequest+cURL.swift */,
 			);
@@ -147,6 +150,7 @@
 				02E1A302217E2FA400A0B320 /* Requestable.swift in Sources */,
 				02E1A304217E307200A0B320 /* Dictionary+QueryItems.swift in Sources */,
 				02E1A306217E30A400A0B320 /* URLRequest+cURL.swift in Sources */,
+				027659EF236AD5F000029D3B /* MockRequestable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
