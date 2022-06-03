@@ -2,9 +2,9 @@
 
 ## Installation 
 
-Add to your podfile
-```ruby
-pod 'Requestable', :git => 'https://github.com/ArifADS/Requestable'
+Add to your Package.swift
+```swift
+.package("https://github.com/ArifADS/Requestable", .branch("master"))
 ```
 
 ## Usage Example
@@ -66,30 +66,28 @@ extension API: Requestable {
 
 Conforming to `Requestable` gives you a `request()` method which returns an `URLRequest` that you can use with `URLSession`, `Alamofire` or any other library of your choice.
 
-If we create a `Responsable` protocol with an asynchronous fetch using [PromiseKit](https://github.com/mxcl/PromiseKit]), like this:
+If we create a `Responsable` protocol with an asynchronous fetch using Swift's async/await, like this:
 
 ```swift
 protocol Responsable {
-    func response() -> Promise<Data>
+    func response() async throws -> Data
 }
 ```
 
 Our protocol compliance would be something like:
 ```swift
-import PromiseKit
-
 extension API: Responsable {
-    func response() -> Promise<Data> {
+    func response() async throws -> Data {
         let request = self.request()
-        return URLSession.shared.dataTask(.promise, with: request)
-        .map { $0.data }
+        let (data, _) = try await URLSession.shared.dataTask(for: request)
+        return data
     }
 }
 ```
 
 So your final HTTP Request is as easy as 
 ```swift
-let beersData = try API.beers(styleId: 2).response().wait()
+let beersData = try await API.beers(styleId: 2).response()
 // Do whatever with the server data, like JSONDecoder, JSONSerialization, or any other Data serialization of your choice.
 ```
 
